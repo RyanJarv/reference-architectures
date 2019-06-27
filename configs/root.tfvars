@@ -1,10 +1,10 @@
 # This is a terraform configuration file
 
 # The "apex" service discovery domain for *all* infrastructure
-domain = "test.co"
+domain = "ryanjarv.sh"
 
 # The global namespace that should be shared by all accounts
-namespace = "test"
+namespace = "rjsh"
 
 # The default region for this account
 aws_region = "us-west-2"
@@ -21,7 +21,7 @@ kops_non_masquerade_cidr = "100.64.0.0/10"
 
 
 # The docker registry that will be used for the images built (nothing will get pushed)
-docker_registry = "cloudposse"
+docker_registry = "ryanjarv"
 
 # The templates to use for this account
 templates = [
@@ -72,7 +72,7 @@ templates = [
 ]
 
 # Account email address format (e.g. `ops+%s@example.co`). This is not easily changed later.
-account_email = "ops+%s@test.co"
+account_email = "me+ops-rjsh+%s@ryanjarv.sh"
 
 # List of accounts to enable
 accounts_enabled = [
@@ -87,7 +87,7 @@ accounts_enabled = [
 
 # Administrator IAM usernames mapped to their keybase usernames for password encryption
 users = {
-#  "erik@cloudposse.com" = "osterman"
+  "me@ryanjarv.sh" = "jarv"
 }
 
 # Geodesic Base Image (don't change this unless you know what you're doing)
