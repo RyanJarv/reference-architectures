@@ -4,7 +4,7 @@ root/clean:
 
 ## Initialize the "root" AWS account
 root/init: root/clean
-	$(DOCKER_RUN) cloudposse/geodesic:0.96.0 -c /scripts/get-root-account-id.sh
+	$(DOCKER_RUN) cloudposse/geodesic:0.115.0 -c /scripts/get-root-account-id.sh
 	terraform init -from-module=modules/root accounts/root
 	terraform apply \
 		-var-file=artifacts/aws.tfvars \
